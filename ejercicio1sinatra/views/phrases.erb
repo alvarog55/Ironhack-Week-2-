@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <center>
+    	<h1>My favourite phrases</h1>
+
+		<p> Refresh to see a new of my phrases</p>
+		<p> <%= @phrase %> </p>
+		<a href="/phrases"> Refresh</a>
+ 
+		<form action='/phrases' method='POST'>
+			<input type='text' name='input_phrase' placeholder='into'/> 
+		</form>
+		<a href="/no_phrases">  Hide  </a>
+		<ul>
+			<% @phrases.each do |phrase| %>
+				<li><%= phrase%></li>
+			<% end %>
+		</ul>
+	</center>
+  </body>
+<html>
