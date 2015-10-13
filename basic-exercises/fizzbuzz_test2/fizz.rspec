@@ -1,0 +1,26 @@
+require "rspec"
+require_relative "./fizzbuzz.rb"
+
+RSpec.describe Fizzbuzz do
+	before :all do
+		@fizz_buzz = Fizzbuzz.new
+	end
+	describe "#show" do
+		it "show fizzbuzz for the multiply of 3 and 5" do
+			expect(@fizz_buzz.show(15)).to eq("fizzbuzz")
+		end
+
+		it "should return 0 when adding empty string" do
+			expect(@fizz_buzz.show(20)).to eq("buzz")
+		end
+
+		it "should return 1 when there is only a number in the string" do
+			expect(@fizz_buzz.show(9)).to eq("fizz")
+		end
+
+		it "should return 1 when there is only a number in the string" do
+			expect(@fizz_buzz.show(7)).to eq(result)
+		end
+
+	end
+end
